@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private boolean flag = false;
     private int counter = 0;
+    private long millis = 5000L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     setLayoutColor(counter);
 
                     try {
-                        Thread.sleep(3000);
+                        Thread.sleep(millis);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -67,9 +68,22 @@ public class MainActivity extends AppCompatActivity {
                 b_yellow.setBackgroundColor(getResources().getColor(R.color.yellow));
                 break;
             case 3:
+                millis = 2000L;
                 b_green.setBackgroundColor(getResources().getColor(R.color.green));
                 break;
             case 4:
+            case 6:
+            case 8:
+                millis = 500L;
+                b_green.setBackgroundColor(getResources().getColor(R.color.gray));
+                break;
+            case 5:
+            case 7:
+            case 9:
+                b_green.setBackgroundColor(getResources().getColor(R.color.green));
+                break;
+            case 10:
+                millis = 5000L;
                 b_yellow.setBackgroundColor(getResources().getColor(R.color.yellow));
                 counter = 0;
                 break;

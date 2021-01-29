@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bulb_yellow"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/bulb_yellow" />
 
     <LinearLayout
         android:id="@+id/bulb_yellow"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bulb_red"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/bulb_red" />
 
     <LinearLayout
         android:id="@+id/bulb_red"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button1"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:onClick="onClickStart"
-        android:text="Start"
+        android:text="@string/start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bulb_green" />

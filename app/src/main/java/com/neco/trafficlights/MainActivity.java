@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             new Thread(() -> {
                 while (flag){
                     counter++;
+                    setAllLayoutsIsGrey();
                     setLayoutColor(counter);
 
                     try {
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }).start();
-        }else {
+        }
+        else {
             flag = false;
             button.setText("Start");
         }
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setLayoutColor(int count) {
-        setAllLayoutsGrey();
         switch (count) {
             case 1:
                 b_red.setBackgroundColor(getResources().getColor(R.color.red));
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setAllLayoutsGrey() {
+    private void setAllLayoutsIsGrey() {
         int color = getResources().getColor(R.color.gray);
 
         b_red.setBackgroundColor(color);
